@@ -304,7 +304,7 @@ def view_link(message, amount):
                  reply_markup=markup)
     return
   # Replace this with your actual validation for a Telegram post link
-  if not is_valid_link(link):
+  if not is_valid_link(https://t.me/):
     bot.send_message(
         user_id,
         "❌ Invalid link provided. Please provide a valid Telegram post link.",
