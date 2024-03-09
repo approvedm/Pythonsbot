@@ -5,16 +5,16 @@ import time
 from telebot.types import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup
 from functions import insertUser, track_exists, addBalance, cutBalance, getData, addRefCount, isExists, setWelcomeStaus, setReferredStatus
 
-bot_token = "HereBotToken" #bot token from @BotFather
+bot_token = "7196090794:AAEpnKC9a2Pj8uqs3MRelTE-ZAZb5dYI5As" #bot token from @BotFather
 SmmPanelApi = "smm api key" # api key from eadysmmpanel.com you can change api link
 bot = telebot.TeleBot(bot_token)
-admin_user_id = 5337150824
+admin_user_id = 6743864474
 welcome_bonus = 100
 ref_bonus = 500
 min_view = 100
 max_view = 30000
-required_channels = ['@pythonViewbooster']  # more channel same as
-payment_channel = "@pythonViewbooster"
+required_channels = ['@selfserverBo']  # more channel same as
+payment_channel = "@selfserverBo"
 
 
 # Function to check if the user is a member of all required channels
@@ -92,9 +92,9 @@ def send_welcome(message):
 
   markup = ReplyKeyboardMarkup(resize_keyboard=True)
   button1 = KeyboardButton("👁‍🗨 Order View")
-  button2 = KeyboardButton("👤 My Account")
+  button2 = KeyboardButton("👤 Account")
   button3 = KeyboardButton("💳 Pricing")
-  button4 = KeyboardButton("🗣 Invite Friends")
+  button4 = KeyboardButton("🗣 Invite")
   button5 = KeyboardButton("📜 Help")
 
   markup.add(button1)
@@ -115,7 +115,7 @@ def handle_text(message):
   first_name = message.chat.first_name
 
   # balance command
-  if message.text == "👤 My Account":
+  if message.text == "👤 Account":
     referral_link = f"https://t.me/{bot_username}?start={user_id}"
     data = getData(user_id)
     total_refs = data['total_refs']
@@ -131,7 +131,7 @@ def handle_text(message):
 """
     bot.reply_to(message, msg, parse_mode='html')
 
-  if message.text == "🗣 Invite Friends":
+  if message.text == "🗣 Invite":
     bot_username = bot.get_me().username  # Get the bot's username
     referral_link = f"https://t.me/{bot_username}?start={user_id}"
     data = getData(user_id)
@@ -164,7 +164,7 @@ Estimating views speed is difficult because the speed can vary depending on the 
 <b><u>•Is it possible to transfer balance to other users?</u></b>
 Yes, if your balance is more than 10k and you want to transfer all of them, you can send a request to support.
 
-🆘 In case you have any problem, contact @KsCoder"""
+🆘 In case you have any problem, contact @selfserverBo"""
 
     bot.reply_to(message, msg, parse_mode="html")
 
@@ -181,9 +181,9 @@ Yes, if your balance is more than 10k and you want to transfer all of them, you 
 ➎ 📦 1700K views for 50$ (0.03$ per K)
 ➏ 📦 5000K views for 100$ (0.02$ per K) </b>
 
-💰 Pay with Bitcoin, USDT, BSC, BUSD,  ... 👉🏻 @KsCoder
+💰 Pay with Bitcoin, USDT, BSC, BUSD,  ... 👉🏻 @selfserverBo
 
-💳️ Pay with Paypal, Paytm, WebMoney, Perfect Money, Payeer ... 👉🏻 @KsCoder
+💳️ Pay with Paypal, Paytm, WebMoney, Perfect Money, Payeer ... 👉🏻 @selfserverBo
 
 <b><u>🎁 Bonus:</u></b>
 Cryptocurrency: 10%
@@ -194,14 +194,14 @@ Other methods: 0%
 """
 
     markup = InlineKeyboardMarkup()
-    button1 = InlineKeyboardButton("💲 PayPal", url="https://t.me/KsCoder")
+    button1 = InlineKeyboardButton("💲 PayPal", url="https://t.me/selfserverBo")
     button2 = InlineKeyboardButton("💳 Perfect Money",
-                                   url="https://t.me/KsCoder")
-    button6 = InlineKeyboardButton("💳 Webmoney", url="https://t.me/KsCoder")
+                                   url="https://t.me/selfserverBo")
+    button6 = InlineKeyboardButton("💳 Webmoney", url="https://t.me/selfserverBo")
     button3 = InlineKeyboardButton("💎 Bitcoin, Litecoin, USDT...",
-                                   url="https://t.me/KsCoder")
-    button4 = InlineKeyboardButton("💸 Paytm", url="https://t.me/KsCoder")
-    button5 = InlineKeyboardButton("💰 Paytm", url="https://t.me/KsCoder")
+                                   url="https://t.me/selfserverBo")
+    button4 = InlineKeyboardButton("💸 Paytm", url="https://t.me/selfserverBo")
+    button5 = InlineKeyboardButton("💰 Paytm", url="https://t.me/selfserverBo")
 
     markup.add(button1)
     markup.add(button2, button6)
@@ -229,9 +229,9 @@ Other methods: 0%
 
 markup = ReplyKeyboardMarkup(resize_keyboard=True)
 button1 = KeyboardButton("👁‍🗨 Order View")
-button2 = KeyboardButton("👤 My Account")
+button2 = KeyboardButton("👤 Account")
 button3 = KeyboardButton("💳 Pricing")
-button4 = KeyboardButton("🗣 Invite Friends")
+button4 = KeyboardButton("🗣 Invite")
 button5 = KeyboardButton("📜 Help")
 markup.add(button1)
 markup.add(button2, button3)
